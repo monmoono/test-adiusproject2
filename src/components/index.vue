@@ -1,22 +1,28 @@
 <template>
   <div class="hello">
+    <div class="text-home">Welcom to website</div>
     <div class="com">
-      <div class="text-h">Welcom to website</div>
       <div class="box1">
         <h1 class="text-h">Meet our leadership</h1>
-        <p class="textp">
-          Libero fames augue nisl porttitor nisi,quis. Id ac elit odio vitae
-          elementum enim vitae ullamcorper suspendisse.Vivamus fringilla.
-        </p>
+        <div class="textp">
+          <p>
+            Libero fames augue nisl porttitor nisi,quis. Id ac elit odio vitae
+          </p>
+          <p>elementum enim vitae ullamcorper suspendisse.Vivamus fringilla.</p>
+        </div>
       </div>
-      <div class="item3">
-        <tbody v-for="(item, index) in items" :key="index">
+      <div class="box2">
+        <table v-for="(item, index) in items" :key="index">
           <tr>
-            <td><img :src="item.avatar" /></td>
-            <td>{{ item.first_name + "" + item.last_name }}</td>
-            <td>{{ item.email }}</td>
+            <td><img :src="item.avatar" class="img" /></td>
+            <div class="name">
+              <td>{{ item.first_name + "" + item.last_name }}</td>
+            </div>
+            <div class="email">
+              <td>{{ item.email }}</td>
+            </div>
           </tr>
-        </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -52,6 +58,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.text-home {
+  font-size: 5rem;
+  font-weight: bolder;
+  margin-top: 1.8rem;
+  text-align: center;
+}
 .box1 {
   grid-area: "Box1";
 }
@@ -60,59 +72,88 @@ export default {
   display: grid;
   grid-area: "Box2";
   grid-template-columns: auto auto;
+  // margin: 2rem;
 }
 
-.container1 {
+.com {
   display: grid;
   grid-template-areas: "Box1 Box2 Box2";
-  gap: 1rem;
-  padding: 7% auto;
+  // gap: 1rem;
+  margin-top: 4.5rem;
+  margin-bottom: 4rem;
+  
 }
 
 .textp {
   line-height: 1.5;
   padding-top: 1.5rem;
   font-size: 1.5rem;
+  text-align: left;
+  padding-left: 2rem;
 }
 
 .text-h {
   font-size: 3.5rem;
+  padding-left: 2rem;
+  text-align: left;
 }
 
-.list-name {
-  padding-left: 15px;
-  font-size: 1.5rem;
-}
-
-.list-email {
-  padding-left: 15px;
-  font-size: 1rem;
-}
-
-.list-head {
-  margin-left: 10%;
-}
-
-.list-img {
-  width: 85px;
-  height: 85px;
+.img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
-
-.com {
-  margin-top: 8%;
-  background-color: #f2f2f2;  
-  margin-bottom: 8%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+.name {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  padding-left: 1rem;
 }
 
-.welcome {
-  text-align: center;
-  font-size: 4rem;
-  margin-bottom: 3%;
-  color: #fff;
-  margin-left: 30rem;
-  margin-right: 30rem;
-  border-radius: 1.5rem;
+.email {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
 }
+// .list-name {
+//   padding-left: 15px;
+//   font-size: 1.5rem;
+// }
+
+// .list-email {
+//   padding-left: 15px;
+//   font-size: 1rem;
+// }
+
+// .list-head {
+//   margin-left: 10%;
+// }
+
+// .list-img {
+//   width: 85px;
+//   height: 85px;
+//   border-radius: 50%;
+// }
+
+// .com {
+//   margin-top: 8%;
+//   background-color: #f2f2f2;
+//   margin-bottom: 8%;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+
+// .welcome {
+//   text-align: center;
+//   font-size: 4rem;
+//   margin-bottom: 3%;
+//   color: #fff;
+//   margin-left: 30rem;
+//   margin-right: 30rem;
+//   border-radius: 1.5rem;
+// }
+// .img {
+//   width: 85px;
+//   height: 85px;
+//   border-radius: 50%;
+// }
 </style>
