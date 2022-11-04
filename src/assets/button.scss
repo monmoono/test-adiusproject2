@@ -120,6 +120,18 @@
   color: #0c10f1;
 }
 
+.linktext {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #0c10f1;
+}
+
 .link:hover,
 .link:focus {
   color: #830388;
