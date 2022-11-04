@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
-    <div class="grid-container">
-      <div class="item1">Welcom to website <i class="fa fa-car"></i></div>
-      <div class="item2">
+    <div class="com">
+      <div class="text-h">Welcom to website</div>
+      <div class="box1">
         <h1 class="text-h">Meet our leadership</h1>
         <p class="textp">
           Libero fames augue nisl porttitor nisi,quis. Id ac elit odio vitae
@@ -18,7 +18,6 @@
           </tr>
         </tbody>
       </div>
-      <div class="item4">Right</div>
     </div>
   </div>
 </template>
@@ -53,33 +52,66 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item1 {
-  grid-area: header;
-}
-.item2 {
-  grid-area: menu;
-}
-.item3 {
-  grid-area: main;
-}
-.item4 {
-  grid-area: right;
+.box1 {
+  grid-area: "Box1";
 }
 
-.grid-container {
+.box2 {
   display: grid;
-  grid-template-areas:
-    "header header header header header header"
-    "menu main main main right right";
-  gap: 10px;
-  background-color: #2196f3;
-  padding: 10px;
+  grid-area: "Box2";
+  grid-template-columns: auto auto;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+.container1 {
+  display: grid;
+  grid-template-areas: "Box1 Box2 Box2";
+  gap: 1rem;
+  padding: 7% auto;
+}
+
+.textp {
+  line-height: 1.5;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.text-h {
+  font-size: 3.5rem;
+}
+
+.list-name {
+  padding-left: 15px;
+  font-size: 1.5rem;
+}
+
+.list-email {
+  padding-left: 15px;
+  font-size: 1rem;
+}
+
+.list-head {
+  margin-left: 10%;
+}
+
+.list-img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+
+.com {
+  margin-top: 8%;
+  background-color: #f2f2f2;  
+  margin-bottom: 8%;
+}
+
+.welcome {
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  font-size: 4rem;
+  margin-bottom: 3%;
+  color: #fff;
+  margin-left: 30rem;
+  margin-right: 30rem;
+  border-radius: 1.5rem;
 }
 </style>
