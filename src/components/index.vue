@@ -64,8 +64,12 @@ export default {
 .text-home {
   font-size: 5rem;
   font-weight: bolder;
-  margin-top: 1.8rem;
+  margin: 1.8rem 30rem;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1.2rem 0 1.2rem 0;
+  border-radius: 10px;
+  background-color: #f4f4f4;
 }
 .box1 {
   grid-area: "Box1";
@@ -85,6 +89,9 @@ export default {
   // gap: 1rem;
   margin-top: 4.5rem;
   margin-bottom: 5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1.2rem 0 1.2rem 0;
+  background-color: #f4f4f4;
 }
 
 .textp {
@@ -124,6 +131,12 @@ export default {
   }
   .text-home {
     font-size: 2.5rem;
+    font-weight: bolder;
+    margin: 1.8rem 8rem;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1.2rem 0 1.2rem 0;
+    border-radius: 10px;
   }
 
   .text-h {
@@ -171,6 +184,12 @@ export default {
 
   .text-home {
     font-size: 2rem;
+    font-weight: bolder;
+    margin: 1.8rem 0.6rem;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1.2rem 0 1.2rem 0;
+    border-radius: 10px;
   }
 
   .box2 {

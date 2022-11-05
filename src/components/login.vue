@@ -68,7 +68,11 @@
           </div>
         </div>
         <div>
-          <button class="btn primary" @click="Login" style="width: 100%;font-size:20px">
+          <button
+            class="btn primary"
+            @click="Login"
+            style="width: 100%; font-size: 20px"
+          >
             Login
           </button>
         </div>
@@ -163,14 +167,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 97%;
-  height: 100%;
+  width: 70%;
+  height: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 20rem;
+  margin-right: 10rem;
 }
 
 .loginL {
@@ -188,7 +192,7 @@ export default {
 
 .wallpaper {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -314,6 +318,11 @@ However, delay the fade out process for 2.5 seconds */
 
   .btnlogin {
     width: 6rem;
+  }
+
+  .main {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
