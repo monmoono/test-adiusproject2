@@ -75,8 +75,8 @@
         </div>
         <div class="grid-item">
           <div class="footer-list">
-            <h3>Products</h3>
             <ul>
+              <h3>Products</h3>
               <li v-for="(item, index) in itemsFt1" :key="index" link>
                 {{ item.title }}
               </li>
@@ -84,9 +84,17 @@
           </div>
         </div>
         <div class="grid-item">
-          <h3>Company</h3>
           <ul>
+            <h3>Company</h3>
             <li v-for="(item, index) in itemsFt2" :key="index" link>
+              {{ item.title }}
+            </li>
+          </ul>
+        </div>
+        <div class="grid-item">
+          <ul>
+            <h3>Customer Service</h3>
+            <li v-for="(item, index) in itemsFt3" :key="index" link>
               {{ item.title }}
             </li>
           </ul>
@@ -132,6 +140,15 @@ export default {
       { title: "Careers" },
       { title: "Terms & Conditions" },
       { title: "Privacy" },
+    ],
+    itemsFt3: [
+      { title: "Contact" },
+      { title: "Shipping" },
+      { title: "Returns" },
+      { title: "Warranty" },
+      { title: "Secure Payments" },
+      { title: "FAQ" },
+      { title: "Find a store" },
     ],
   }),
 
@@ -232,7 +249,7 @@ nav {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   padding: 10px;
 }
 .grid-container2 {
@@ -270,20 +287,24 @@ h3 {
 }
 
 li {
-  color: #000;
+  color: rgb(119, 119, 119);
   margin-bottom: 2vh;
   font-size: 1vw;
   cursor: pointer;
   padding-bottom: 1vh;
+  list-style-type: none;
 
   &:hover {
     background-color: #f4f4f4;
-    border-radius: 4px;
+    border-radius: 5px;
   }
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   display: inline-block;
+  text-align: left;
 }
 
 .subtext {
