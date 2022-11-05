@@ -69,6 +69,7 @@ export default {
 }
 .box1 {
   grid-area: "Box1";
+  margin-left: 4rem;
 }
 
 .box2 {
@@ -83,7 +84,7 @@ export default {
   grid-template-areas: "Box1 Box2 Box2";
   // gap: 1rem;
   margin-top: 4.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .textp {
@@ -147,6 +148,11 @@ export default {
   .email {
     font-size: 1rem;
   }
+
+  .box1 {
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+  }
 }
 @media (max-width: 468px) {
   .com {
@@ -166,6 +172,9 @@ export default {
   .text-home {
     font-size: 2rem;
   }
-}
 
+  .box2 {
+    margin-left: 2rem;
+  }
+}
 </style>

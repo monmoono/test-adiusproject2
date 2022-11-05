@@ -68,7 +68,7 @@
           </div>
         </div>
         <div>
-          <button class="btn primary" @click="Login" style="width: 100%">
+          <button class="btn primary" @click="Login" style="width: 100%;font-size:20px">
             Login
           </button>
         </div>

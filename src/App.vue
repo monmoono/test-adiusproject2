@@ -187,12 +187,12 @@ export default {
 .button-login {
   // display: inline-block;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
 }
 
 .button-h {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
