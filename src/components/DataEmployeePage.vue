@@ -1,43 +1,28 @@
 <template>
-  <div>
-    <v-container class="centerpage" fluid>
-      <v-row align="center" justify="center" dense>
-        <v-col
-          cols="12"
-          sm="8"
-          md="4"
-          lg="3"
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-card
-            style="margin-right: auto !important; margin-left: auto !important"
-            align="center"
-            max-width="400"
-            width="300"
-          >
-            <div>
-              <img :src="item.avatar" />
-            </div>
-
-            <v-card-text>
-              <h3>{{ item.first_name + " " + item.last_name }}</h3>
-              <h5>{{ item.email }}</h5>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="grey lighten-0" text
-                ><v-icon>mdi-email </v-icon>Email
-              </v-btn>
-              <v-spacer></v-spacer>
-              <v-btn color="grey lighten-0" text
-                ><v-icon>mdi-phone </v-icon>Call
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
+  <div class="hello">
+    <div class="text-home">DataEmployeePage</div>
+    <div class="com">
+      <div class="box2">
+        <div class="card" v-for="(item, index) in items" :key="index">
+          <img :src="item.avatar" class="img" alt="Avatar" />
+          <div class="container">
+            <h4>
+              <b class="name">{{ item.first_name + "" + item.last_name }}</b>
+            </h4>
+            <p class="email">{{ item.email }}</p>
+            <p class="iconadmin">Admin</p>
+          </div>
+          <div>
+            <button class="iconcard" style="float: left">
+              <i class="fa-solid fa-envelope"></i>Email
+            </button>
+            <button class="iconcard" style="float: right; border-right: none">
+              <i class="fa-solid fa-phone"></i>Phone
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -90,17 +75,111 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+}
 
-.imgcircle
-  border-radius: 50%
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
-h3
-  color: black
+.container {
+  padding: 2px 16px;
+}
 
-.centerpage
-  align-items: center
-  display: flex
-  flex-wrap: wrap
-  height: 100%
+.text-home {
+  font-size: 5rem;
+  font-weight: bolder;
+  margin-top: 1.8rem;
+  text-align: center;
+}
+.box1 {
+  grid-area: "Box1";
+}
+
+.box2 {
+  display: grid;
+  grid-area: "Box2";
+  grid-template-columns: auto auto auto auto;
+  column-gap: 2rem;
+  //margin: 2rem;
+}
+
+.com {
+  display: grid;
+  grid-template-areas: "Box2 Box2 Box2 Box2";
+  // gap: 1rem;
+  margin-top: 4.5rem;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+  margin-bottom: 4rem;
+}
+
+.textp {
+  line-height: 1.5;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.text-h {
+  font-size: 3.5rem;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+.email {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.iconadmin {
+  border: none;
+  padding: 0.8rem 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 0.8rem;
+  color: green;
+  background-color: rgb(154, 255, 154);
+  margin-left: 35%;
+  margin-right: 35%;
+  font-weight: bold;
+}
+
+.iconcard {
+  width: 50%;
+  // font-size: 1.5rem;
+  background-color: white;
+  border-left: none;
+  border-bottom: none;
+  border-color: #ddd;
+  color: rgb(146, 146, 146);
+
+  .fa-solid {
+    font-size: 1.5rem;
+    margin: 0.4rem;
+  }
+  &:hover {
+    background-color: #ddd;
+  }
+}
 </style>
