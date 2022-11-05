@@ -89,15 +89,12 @@ export default {
   padding-top: 1rem;
   text-align: center;
 }
-
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 .container {
   padding: 2px 16px;
 }
-
 .text-home {
   font-size: 5rem;
   font-weight: bolder;
@@ -107,7 +104,6 @@ export default {
 .box1 {
   grid-area: "Box1";
 }
-
 .box2 {
   display: grid;
   grid-area: "Box2";
@@ -115,7 +111,6 @@ export default {
   // column-gap: 2rem;
   //margin: 2rem;
 }
-
 .com {
   display: grid;
   grid-template-areas: "Box2 Box2 Box2 Box2";
@@ -126,7 +121,6 @@ export default {
   margin-right: 4.5rem;
   margin-bottom: 4rem;
 }
-
 .textp {
   line-height: 1.5;
   padding-top: 1.5rem;
@@ -134,13 +128,11 @@ export default {
   text-align: left;
   padding-left: 2rem;
 }
-
 .text-h {
   font-size: 3.5rem;
   padding-left: 2rem;
   text-align: left;
 }
-
 .img {
   width: 100px;
   height: 100px;
@@ -152,12 +144,10 @@ export default {
   font-weight: bold;
   padding-left: 1rem;
 }
-
 .email {
   font-size: 1.2rem;
   padding-left: 1rem;
 }
-
 .iconadmin {
   border: none;
   padding: 0.4rem 0.8rem;
@@ -171,7 +161,6 @@ export default {
   margin-bottom: 15%;
   font-weight: bold;
 }
-
 .iconcard {
   width: 50%;
   // font-size: 1.5rem;
@@ -180,7 +169,6 @@ export default {
   border-bottom: none;
   border-color: #ddd;
   color: rgb(146, 146, 146);
-
   .fa-solid {
     font-size: 1.5rem;
     margin: 0.4rem;
@@ -189,7 +177,6 @@ export default {
     background-color: #ddd;
   }
 }
-
 //Snackbar https://codepen.io/pratikjain/pen/xWEERw
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
@@ -206,17 +193,14 @@ export default {
   top: 30px; /* 30px from the bottom */
   border-radius: 10px;
 }
-
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 .show {
   visibility: visible !important; /* Show the snackbar */
-
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
 However, delay the fade out process for 2.5 seconds */
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
   from {
@@ -228,7 +212,6 @@ However, delay the fade out process for 2.5 seconds */
     opacity: 1;
   }
 }
-
 @keyframes fadein {
   from {
     top: 0;
@@ -239,7 +222,6 @@ However, delay the fade out process for 2.5 seconds */
     opacity: 1;
   }
 }
-
 @-webkit-keyframes fadeout {
   from {
     top: 30px;
@@ -250,7 +232,6 @@ However, delay the fade out process for 2.5 seconds */
     opacity: 0;
   }
 }
-
 @keyframes fadeout {
   from {
     top: 30px;
@@ -263,4 +244,27 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 
+@media (max-width: 912px) {
+  .text-home {
+  font-size: 3rem;
+
+}
+
+.com {
+
+  grid-template-areas: "Box2";
+ margin-left: 2.5rem ;
+ margin-right: 3.9rem ;
+
+
+}
+}
+
+@media (max-width: 468px) {
+  .text-home {
+  font-size: 1.5rem;
+
+}
+
+}
 </style>

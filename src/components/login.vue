@@ -3,43 +3,36 @@
     <div class="loginL">
       <img src="@/assets/logo2.png" class="logo" />
       <div class="text-left">
-        <h1 class="mb-2">Sign in to your account</h1>
-        <h5>
-          Or
-          <a class="linktext" @click="setalert(true)"
-            >start your 14-day free trial</a
-          >
-        </h5>
+        <h1 class="mb-2 signin-h1">Sign in to your account</h1>
+        <h5>Or <a class="linktext">start your 14-day free trial</a></h5>
       </div>
       <div style="padding-top: 2px">
         <h4>Sign in with</h4>
         <button
           class="btn secondary btnlogin"
-          @click="setalert(true)"
+          href="https://www.facebook.com/login.php/"
           target="_blank"
         >
           <i class="fa-brands fa-facebook"></i>
         </button>
         <button
           class="btn secondary btnlogin"
-          @click="setalert(true)"
+          href="https://twitter.com/login/"
           target="_blank"
         >
           <i class="fa-brands fa-twitter"></i>
         </button>
         <button
           class="btn secondary btnlogin"
-          @click="setalert(true)"
+          href="https://www.facebook.com/login.php/"
           target="_blank"
         >
           <i class="fa-brands fa-github"></i>
         </button>
       </div>
-      <h5 class="h5-line">
-        <span class="h5-span"> Or continue with</span>
-      </h5>
+      <h5 class="h5-line"><span class="h5-span"> Or continue with</span></h5>
       <div>
-        <div>
+        <div style="text-align: start; font-weight: bold">
           <label>Email address</label>
           <input
             class="inputText"
@@ -49,8 +42,8 @@
             type="email"
           />
         </div>
-        <div>
-          <label>password</label>
+        <div style="text-align: start; font-weight: bold">
+          <label>Password</label>
           <input
             class="inputText"
             v-model="password"
@@ -71,7 +64,7 @@
             <label for="ChkRemember">Remember me</label>
           </div>
           <div class="gridloginR">
-            <a class="linktext" @click="setalert(true)">Forger Password?</a>
+            <a class="linktext">Forger Password?</a>
           </div>
         </div>
         <div>
@@ -87,8 +80,8 @@
   </div>
   <!-- popup alert -->
   <div id="snackbar">
-    <i class="fa-solid fa-xmark" style="font-size: 20px"></i
-    ><a style="margin-left: 20px">{{ textalert }}</a>
+    <i class="fa-solid fa-xmark"></i
+    ><a style="margin-left: 20px">Wrong Email or Password !</a>
   </div>
 </template>
 
@@ -100,7 +93,6 @@ export default {
     email: "",
     password: "",
     ChkRemember: "",
-    textalert: "",
   }),
   methods: {
     Login() {
@@ -132,30 +124,14 @@ export default {
         })
         .catch((err) => {
           console.log("error2", err);
-          this.setalert(false);
-          // var x = document.getElementById("snackbar");
-          // this.textalert = "Wrong Email or Password !"
-          // // Add the "show" class to DIV
-          // x.className = "show";
-          // // After 3 seconds, remove the show class from DIV
-          // setTimeout(function () {
-          //   x.className = x.className.replace("show", "");
-          // }, 3000);
+          var x = document.getElementById("snackbar");
+          // Add the "show" class to DIV
+          x.className = "show";
+          // After 3 seconds, remove the show class from DIV
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 3000);
         });
-    },
-    setalert(bool) {
-      var x = document.getElementById("snackbar");
-      if (bool === false) {
-        this.textalert = "Wrong Email or Password !";
-      } else {
-        this.textalert = "This function is not yet available.";
-      }
-      // Add the "show" class to DIV
-      x.className = "show";
-      // After 3 seconds, remove the show class from DIV
-      setTimeout(function () {
-        x.className = x.className.replace("show", "");
-      }, 3000);
     },
   },
   mounted() {
@@ -177,65 +153,52 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/button.scss";
 
+.logo {
+  width: 100px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.loginL {
+  width: 50%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 2;
+}
+.loginR {
+  width: 50%;
+  // height: 50%;
+}
+
+.wallpaper {
+  width: 100%;
+  height: 100vh;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 .btnlogin {
   width: 8rem;
   font-size: 1.5rem;
   padding: 6px;
 }
-.main {
-  display: grid;
-  grid-template-areas: "left right";
-  gap: 5rem;
-  padding: 5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
-}
-.gridlogin {
-  display: grid;
-  grid-template-areas: "left right";
-  gap: 10px;
-  padding: 10px;
-}
-.gridloginL {
-  grid-area: left;
-  text-align: left;
-}
-.gridloginR {
-  grid-area: right;
-  text-align: right;
-}
-.loginL {
-  text-align: left;
-  grid-area: left;
-  float: right;
-}
-.loginR {
-  display: block;
-  grid-area: right;
-  // width: 50%;
-}
-
-.wallpaper {
-  float: right;
-  width: 100%;
-  height: 100%;
-}
-
-.btnSignin {
-  width: 9rem;
-  margin: 0.5rem;
-  background-color: #6c757d;
-}
 
 .h5-line {
-  // position: relative;
-  // z-index: 1;
-  // overflow: hidden;
-  // text-align: center;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #000;
@@ -243,36 +206,29 @@ export default {
   margin: 10px 0 20px;
 }
 
-// .h5-line:before .h5-line:after {
-//   position: absolute;
-//   top: 51%;
-//   overflow: hidden;
-//   width: 50%;
-//   height: 1px;
-//   content: "\a0";
-//   background-color: #000000;
-// }
-
-// .h5-line:before {
-//   margin-left: -50%;
-//   text-align: right;
-// }
 .h5-span {
   background: #fff;
-  padding: 0 10px;
 }
 .inputText {
   width: 300px;
-  height: 35px;
-  margin: 0.5rem 0rem 1rem;
-  border-radius: 4px;
+  height: 40px;
+  border-radius: 10px;
 }
-.logo {
-  margin-top: 2%;
-  width: 6vw;
+
+.gridlogin {
+  display: grid;
+  grid-template-areas: "left right";
+  gap: 10px;
+  padding: 10px;
+  font-size: 1rem;
 }
-.checkbox {
-  text-align: left;
+.gridloginL {
+  grid-area: left;
+  text-align: start;
+}
+.gridloginR {
+  grid-area: right;
+  text-align: end;
 }
 
 //Snackbar https://codepen.io/pratikjain/pen/xWEERw
@@ -344,6 +300,49 @@ However, delay the fade out process for 2.5 seconds */
   to {
     top: 0;
     opacity: 0;
+  }
+}
+
+@media (max-width: 912px) {
+  .loginL {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .loginR {
+    display: none;
+  }
+
+  .btnlogin {
+    width: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btnlogin {
+    width: 4rem;
+  }
+
+  .signin-h1 {
+    font-size: 1.3rem;
+  }
+
+  .main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 504px) {
+  .btnlogin {
+    width: 2.5rem;
+  }
+
+  .main {
+    width: 80%;
+  }
+
+  .loginL {
+    padding: 2rem 0 2rem 0;
+    width: 80%;
   }
 }
 </style>
