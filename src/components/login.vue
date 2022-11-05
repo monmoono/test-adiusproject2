@@ -6,46 +6,54 @@
         <h1 class="mb-2">Sign in to your account</h1>
         <h5>Or <a class="linktext">start your 14-day free trial</a></h5>
       </div>
-      <div style="padding-top: 20px">
+      <div style="padding-top: 2px">
         <h4>Sign in with</h4>
         <button
-          class="btn secondary"
+          class="btn secondary btnlogin"
           href="https://www.facebook.com/login.php/"
           target="_blank"
         >
-          facebook
+          <i class="fa-brands fa-facebook"></i>
         </button>
         <button
-          class="btn secondary"
+          class="btn secondary btnlogin"
           href="https://twitter.com/login/"
           target="_blank"
         >
-          twitter
+          <i class="fa-brands fa-twitter"></i>
         </button>
         <button
-          class="btn secondary"
+          class="btn secondary btnlogin"
           href="https://www.facebook.com/login.php/"
           target="_blank"
         >
-          githun
+          <i class="fa-brands fa-github"></i>
         </button>
       </div>
-      <h5 class="h5-line">Or continue with</h5>
+      <h5 class="h5-line"><span class="h5-span"> Or continue with</span></h5>
       <div>
-        <input
-          v-model="email"
-          placeholder="Email"
-          style="width: 100%"
-          type="email"
-        />
-        <input
-          v-model="password"
-          placeholder="Password"
-          style="width: 100%"
-          type="password"
-        />
+        <div>
+          <label>Email address</label>
+          <input
+            class="inputText"
+            v-model="email"
+            placeholder="Email address"
+            style="width: 100%"
+            type="email"
+          />
+        </div>
+        <div>
+          <label>password</label>
+          <input
+            class="inputText"
+            v-model="password"
+            placeholder="Password"
+            style="width: 100%"
+            type="password"
+          />
+        </div>
         <div class="gridlogin">
-          <div>
+          <div class="gridloginL">
             <input
               type="checkbox"
               v-model="ChkRemember"
@@ -53,8 +61,13 @@
               checked="checked"
               id="ChkRemember"
             />
-            <label for="ChkRemember" style="grid-area: left">Remember me</label>
+            <label for="ChkRemember">Remember me</label>
           </div>
+          <div class="gridloginR">
+            <a class="linktext">Forger Password?</a>
+          </div>
+        </div>
+        <div>
           <button class="btn primary" @click="Login" style="width: 100%">
             Login
           </button>
@@ -130,13 +143,22 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/button.scss";
 
+.btnlogin {
+  width: 8rem;
+  font-size: 1.5rem;
+  padding: 6px;
+}
 .main {
   display: grid;
-  grid-template-areas: "left left right right";
-  gap: 10px;
-  padding: 10px;
+  grid-template-areas: "left right";
+  gap: 5rem;
+  padding: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 2%;
+  border-radius: 10px;
 }
 .gridlogin {
   display: grid;
@@ -144,17 +166,27 @@ export default {
   gap: 10px;
   padding: 10px;
 }
-
+.gridloginL {
+  grid-area: left;
+}
+.gridloginR {
+  grid-area: right;
+}
 .loginL {
   text-align: left;
   grid-area: left;
+  float: right;
 }
 .loginR {
+  display: block;
   grid-area: right;
+  // width: 50%;
 }
 
 .wallpaper {
-  width: 50%;
+  float: right;
+  width: 100%;
+  height: 100%;
 }
 
 .btnSignin {
@@ -164,31 +196,39 @@ export default {
 }
 
 .h5-line {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  // position: relative;
+  // z-index: 1;
+  // overflow: hidden;
+  // text-align: center;
+  width: 100%;
   text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
 }
 
-.h5-line:before .h5-line:after {
-  position: absolute;
-  top: 51%;
-  overflow: hidden;
-  width: 50%;
-  height: 1px;
-  content: "\a0";
-  background-color: #e0e0e0;
-}
+// .h5-line:before .h5-line:after {
+//   position: absolute;
+//   top: 51%;
+//   overflow: hidden;
+//   width: 50%;
+//   height: 1px;
+//   content: "\a0";
+//   background-color: #000000;
+// }
 
-.h5-line:before {
-  margin-left: -50%;
-  text-align: right;
+// .h5-line:before {
+//   margin-left: -50%;
+//   text-align: right;
+// }
+.h5-span {
+  background: #fff;
+  padding: 0 10px;
 }
-
-input {
+.inputText {
   width: 300px;
-  height: 25px;
-  margin: 0 1.1rem;
+  height: 35px;
+  margin: 0.5rem 0rem 1rem;
   border-radius: 4px;
 }
 .logo {
