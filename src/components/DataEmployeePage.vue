@@ -2,8 +2,8 @@
   <div class="hello">
     <div class="text-home">DataEmployeePage</div>
     <div class="com">
-      <div class="box2">
-        <div class="card" v-for="(item, index) in items" :key="index">
+      <div class="box2" v-for="(item, index) in items" :key="index">
+        <div class="card">
           <img :src="item.avatar" class="img" alt="Avatar" />
           <div class="container">
             <h4>
@@ -111,8 +111,8 @@ export default {
 .box2 {
   display: grid;
   grid-area: "Box2";
-  grid-template-columns: auto auto auto auto;
-  column-gap: 2rem;
+  grid-template-columns: auto;
+  // column-gap: 2rem;
   //margin: 2rem;
 }
 
@@ -120,6 +120,7 @@ export default {
   display: grid;
   grid-template-areas: "Box2 Box2 Box2 Box2";
   // gap: 1rem;
+  column-gap: 4.5rem;
   margin-top: 4.5rem;
   margin-left: 4.5rem;
   margin-right: 4.5rem;

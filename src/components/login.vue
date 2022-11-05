@@ -4,33 +4,40 @@
       <img src="@/assets/logo2.png" class="logo" />
       <div class="text-left">
         <h1 class="mb-2">Sign in to your account</h1>
-        <h5>Or <a class="linktext">start your 14-day free trial</a></h5>
+        <h5>
+          Or
+          <a class="linktext" @click="setalert(true)"
+            >start your 14-day free trial</a
+          >
+        </h5>
       </div>
       <div style="padding-top: 2px">
         <h4>Sign in with</h4>
         <button
           class="btn secondary btnlogin"
-          href="https://www.facebook.com/login.php/"
+          @click="setalert(true)"
           target="_blank"
         >
           <i class="fa-brands fa-facebook"></i>
         </button>
         <button
           class="btn secondary btnlogin"
-          href="https://twitter.com/login/"
+          @click="setalert(true)"
           target="_blank"
         >
           <i class="fa-brands fa-twitter"></i>
         </button>
         <button
           class="btn secondary btnlogin"
-          href="https://www.facebook.com/login.php/"
+          @click="setalert(true)"
           target="_blank"
         >
           <i class="fa-brands fa-github"></i>
         </button>
       </div>
-      <h5 class="h5-line"><span class="h5-span"> Or continue with</span></h5>
+      <h5 class="h5-line">
+        <span class="h5-span"> Or continue with</span>
+      </h5>
       <div>
         <div>
           <label>Email address</label>
@@ -64,7 +71,7 @@
             <label for="ChkRemember">Remember me</label>
           </div>
           <div class="gridloginR">
-            <a class="linktext">Forger Password?</a>
+            <a class="linktext" @click="setalert(true)">Forger Password?</a>
           </div>
         </div>
         <div>
@@ -80,8 +87,8 @@
   </div>
   <!-- popup alert -->
   <div id="snackbar">
-    <i class="fa-solid fa-xmark"></i
-    ><a style="margin-left: 20px">Wrong Email or Password !</a>
+    <i class="fa-solid fa-xmark" style="font-size: 20px"></i
+    ><a style="margin-left: 20px">{{ textalert }}</a>
   </div>
 </template>
 
@@ -93,6 +100,7 @@ export default {
     email: "",
     password: "",
     ChkRemember: "",
+    textalert: "",
   }),
   methods: {
     Login() {
@@ -124,14 +132,30 @@ export default {
         })
         .catch((err) => {
           console.log("error2", err);
-          var x = document.getElementById("snackbar");
-          // Add the "show" class to DIV
-          x.className = "show";
-          // After 3 seconds, remove the show class from DIV
-          setTimeout(function () {
-            x.className = x.className.replace("show", "");
-          }, 3000);
+          this.setalert(false);
+          // var x = document.getElementById("snackbar");
+          // this.textalert = "Wrong Email or Password !"
+          // // Add the "show" class to DIV
+          // x.className = "show";
+          // // After 3 seconds, remove the show class from DIV
+          // setTimeout(function () {
+          //   x.className = x.className.replace("show", "");
+          // }, 3000);
         });
+    },
+    setalert(bool) {
+      var x = document.getElementById("snackbar");
+      if (bool === false) {
+        this.textalert = "Wrong Email or Password !";
+      } else {
+        this.textalert = "This function is not yet available.";
+      }
+      // Add the "show" class to DIV
+      x.className = "show";
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(function () {
+        x.className = x.className.replace("show", "");
+      }, 3000);
     },
   },
   mounted() {
@@ -178,9 +202,11 @@ export default {
 }
 .gridloginL {
   grid-area: left;
+  text-align: left;
 }
 .gridloginR {
   grid-area: right;
+  text-align: right;
 }
 .loginL {
   text-align: left;
