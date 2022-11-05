@@ -167,45 +167,5 @@ export default {
     font-size: 2rem;
   }
 }
-// .list-name {
-//   padding-left: 15px;
-//   font-size: 1.5rem;
-// }
 
-// .list-email {
-//   padding-left: 15px;
-//   font-size: 1rem;
-// }
-
-// .list-head {
-//   margin-left: 10%;
-// }
-
-// .list-img {
-//   width: 85px;
-//   height: 85px;
-//   border-radius: 50%;
-// }
-
-// .com {
-//   margin-top: 8%;
-//   background-color: #f2f2f2;
-//   margin-bottom: 8%;
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-
-// .welcome {
-//   text-align: center;
-//   font-size: 4rem;
-//   margin-bottom: 3%;
-//   color: #fff;
-//   margin-left: 30rem;
-//   margin-right: 30rem;
-//   border-radius: 1.5rem;
-// }
-// .img {
-//   width: 85px;
-//   height: 85px;
-//   border-radius: 50%;
-// }
 </style>

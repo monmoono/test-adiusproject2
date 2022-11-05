@@ -69,7 +69,7 @@
 
   <router-view />
 
-  <!-- <footer>
+  <footer>
     <div class="footer">
       <div class="grid-container">
         <div class="grid-item">
@@ -101,7 +101,7 @@
             </li>
           </ul>
         </div>
-        <div class="grid-item">
+        <div class="grid-item last-item">
           <h3>Sign up for our newsistter</h3>
           <p class="subtext">
             The latest deals and saving, sent to your inbox weekly.
@@ -121,7 +121,7 @@
         </p>
       </div>
     </div>
-  </footer> -->
+  </footer>
 </template>
 
 <script>
@@ -171,7 +171,7 @@ export default {
   align-items: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  // width: 100%;
+
 
   
 }
@@ -377,6 +377,11 @@ i {
   color: blue;
 }
 
+@media (max-width: 854px) {
+  .last-item {
+  display: none;
+}
+}
 
 @media (max-width: 768px) {
 .button-login {
@@ -385,6 +390,8 @@ i {
 .button-h {
   font-size: 1rem;
 }
+
+
 }
 
 @media (max-width: 468px) {
@@ -412,6 +419,8 @@ i {
 
   margin: 7px;
 }
+
+
 }
 
 

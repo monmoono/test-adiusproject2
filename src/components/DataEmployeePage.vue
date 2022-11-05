@@ -160,7 +160,7 @@ export default {
 
 .iconadmin {
   border: none;
-  padding: 0.8rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   text-align: center;
   font-size: 0.9rem;
   border-radius: 0.8rem;
@@ -168,6 +168,7 @@ export default {
   background-color: rgb(154, 255, 154);
   margin-left: 35%;
   margin-right: 35%;
+  margin-bottom: 15%;
   font-weight: bold;
 }
 
@@ -260,4 +261,6 @@ However, delay the fade out process for 2.5 seconds */
     opacity: 0;
   }
 }
+
+
 </style>
