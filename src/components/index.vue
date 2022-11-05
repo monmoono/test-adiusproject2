@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hello {
+  font-family: "Dosis", sans-serif;
+}
 .text-home {
   font-size: 5rem;
   font-weight: bolder;
@@ -81,7 +84,6 @@ export default {
   // gap: 1rem;
   margin-top: 4.5rem;
   margin-bottom: 4rem;
-  
 }
 
 .textp {
@@ -114,6 +116,56 @@ export default {
   font-size: 1.2rem;
   padding-left: 1rem;
   padding-top: 1rem;
+}
+@media (max-width: 912px) {
+  .box2 {
+    grid-template-columns: auto;
+  }
+  .text-home {
+    font-size: 2.5rem;
+  }
+
+  .text-h {
+    font-size: 1.5rem;
+    // padding-left: 1rem;
+
+    text-align: center;
+  }
+  .textp {
+    // line-height: 1;
+
+    font-size: 1rem;
+  }
+
+  .img {
+    width: 70px;
+    height: 70px;
+  }
+  .name {
+    font-size: 1.2rem;
+  }
+  .email {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 468px) {
+  .com {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .textp {
+    display: none;
+  }
+
+  .text-h {
+    padding-left: 0rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .text-home {
+    font-size: 2rem;
+  }
 }
 // .list-name {
 //   padding-left: 15px;

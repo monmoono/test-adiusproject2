@@ -1,10 +1,11 @@
 <template>
-  <div class="mainsitecolor topnav">
+
+    <div class="nav mainsitecolor ">
     <router-link to="/">
-      <a link class="btn primary"> Home </a>
+      <a link class="btn primary button button-h"> Home </a>
     </router-link>
-    <router-link to="" class="dropdown">
-      <a link class="btn primary">
+    <router-link to="" class="dropdown button ">
+      <a link class="btn primary button-h">
         Solutions
         <i
           class="fa-solid fa-caret-down"
@@ -14,46 +15,47 @@
       <div class="dropdown-content">
         <div class="grid-container2">
           <a
-            ><i class="fa-solid fa-chart-simple"></i>
-            <h4>Analytics</h4>
-            <p>
-              Get a better understanding of where your traffic is coming from.
+            >
+            <i class="fa-solid fa-chart-simple i"></i>
+            <span class="span-h">Analytics</span>
+            
+              <p class="span-p1">Get a better understanding of where <p>your traffic is coming from.</p></p>
+            </a
+          >
+          <a
+            ><i class="fa-solid fa-shield-halved i"></i>
+            <span class="span-h">Securlity</span>
+            <p class="span-p2">Your customers data will be safe and <p>secure.</p></p></a
+          >
+          <a
+            ><i class="fa-solid fa-repeat i"></i>
+            <span class="span-h">Automations</span>
+            <p class="span-p3">
+              Build strategic funnels that will drive <p>your customers to convert.</p>
             </p></a
           >
           <a
-            ><i class="fa-solid fa-shield-halved"></i>
-            <h4>Securlity</h4>
-            <p>Your customers data will be safe and secure.</p></a
+            ><i class="fa-solid fa-arrow-pointer i"></i>
+            <span class="span-h">Engagement</span>
+            <p class="span-p4">Speak directly to your customers in <p>a more meaningful way.</p></p></a
           >
           <a
-            ><i class="fa-solid fa-repeat"></i>
-            <h4>Automations</h4>
-            <p>
-              Build strategic funnels that will drive your customers to convert.
-            </p></a
+            ><i class="fa-solid fa-border-all i"></i>
+            <span class="span-h">Integrations</span>
+            <p class="span-p5">Connect with third-party tools that <p>you're already using.</p></p></a
           >
           <a
-            ><i class="fa-solid fa-arrow-pointer"></i>
-            <h4>Engagement</h4>
-            <p>Speak directly to your customers in a more meaningful way.</p></a
-          >
-          <a
-            ><i class="fa-solid fa-border-all"></i>
-            <h4>Integrations</h4>
-            <p>Connect with third-party tools that you're already using.</p></a
-          >
-          <a
-            ><i class="fa-solid fa-file-contract"></i>
-            <h4>Report</h4>
-            <p>
-              Get detailed reports that will help you make more inforned
-              decisions
+            ><i class="fa-solid fa-file-contract i"></i>
+            <span class="span-h">Report</span>
+            <p class="span-p6">
+              Get detailed reports that will help <p>you make more inforned
+              decisions</p>
             </p></a
           >
         </div>
         <div class="grid-container3 dropdown-content2">
           <a>
-            <h4>Emterprise</h4>
+            <span class="span-h-b">Emterprise</span>
             <button class="newicon" disabled>NEW</button>
             <p>Emterprise your entire team with even more advanced tools.</p></a
           >
@@ -61,13 +63,13 @@
       </div>
     </router-link>
     <router-link to="/login">
-      <a link class="btn success"> Sign in </a>
+      <a link class="btn success button-login"> Sign in </a>
     </router-link>
   </div>
 
   <router-view />
 
-  <footer>
+  <!-- <footer>
     <div class="footer">
       <div class="grid-container">
         <div class="grid-item">
@@ -119,7 +121,7 @@
         </p>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </template>
 
 <script>
@@ -158,23 +160,78 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/button.scss";
-body{
-  padding: 0;
-  margin: 0;
+
+
+
+.nav {
+ 
+  padding: 20px ;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  // width: 100%;
+
+  
 }
 
-.topnav {
-  overflow: hidden;
+.button {
+  margin-right: auto;
+  padding-left: 1rem;
+  // font-weight: 700;
+  
+  
 }
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.button-login {
+  // display: inline-block;
+  font-weight: 700;
+  font-size: 1.5rem;
+
 }
+
+.button-h {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.span-h {
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding-left: 0.4rem;
+ 
+}
+
+.span-p1 , .span-p5 , .span-p6 {
+  padding-left: 1.89rem;
+}
+
+.span-p2 , .span-p3 {
+  padding-left: 2.2rem;
+}
+
+.span-p4 {
+  padding-left: 1.62rem;
+}
+
+
+.span-h-b {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+// .i {
+//  font-size: 3rem;
+// }
+
+// .topnav a {
+//   float: left;
+//   color: #f2f2f2;
+//   text-align: center;
+//   padding: 14px 16px;
+//   text-decoration: none;
+//   font-size: 17px;
+// }
 
 .newicon {
   background-color: blue;
@@ -319,4 +376,43 @@ i {
   font-size: 30px;
   color: blue;
 }
+
+
+@media (max-width: 768px) {
+.button-login {
+  font-size: 1rem;
+}
+.button-h {
+  font-size: 1rem;
+}
+}
+
+@media (max-width: 468px) {
+
+  i {
+  font-size: 15px;
+  color: blue;
+}
+
+.span-p1 , .span-p5 , .span-p6,.span-p2 , .span-p3 , .span-p4 {
+  display: none;
+}
+.span-h {
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding-left: 0.2rem;
+ 
+}
+
+.span-h-b {
+  font-size: 1rem;
+}
+
+.newicon {
+
+  margin: 7px;
+}
+}
+
+
 </style>
