@@ -127,7 +127,7 @@ export default {
           }
           const btn = document.getElementById("login");          
           btn.style.backgroundColor = "red";
-          btn.textContent = 'LogOut';
+          btn.textContent = 'Sign out';
           this.$router.push({ name: "dataEmployeePage" });
         })
         .catch((err) => {
