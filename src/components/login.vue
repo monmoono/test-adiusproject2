@@ -170,7 +170,7 @@ export default {
   margin-top: 3rem;
   margin-bottom: 3rem;
   margin-left: 2rem;
-  margin-right: 2rem;
+  margin-right: 10%;
 }
 
 .loginL {

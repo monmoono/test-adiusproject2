@@ -72,7 +72,7 @@
   <footer>
     <div class="footer">
       <div class="grid-container">
-        <div class="grid-item">
+        <div class="grid-logo">
           <img src="@/assets/logo2.png" class="imgfooter" />
         </div>
         <div class="grid-item">
@@ -85,7 +85,7 @@
             </ul>
           </div>
         </div>
-        <div class="grid-item">
+        <div class="grid-item1">
           <ul>
             <h3>Company</h3>
             <li v-for="(item, index) in itemsFt2" :key="index" link>
@@ -93,7 +93,7 @@
             </li>
           </ul>
         </div>
-        <div class="grid-item">
+        <div class="grid-item2">
           <ul>
             <h3>Customer Service</h3>
             <li v-for="(item, index) in itemsFt3" :key="index" link>
@@ -101,7 +101,7 @@
             </li>
           </ul>
         </div>
-        <div class="grid-item last-item">
+        <div class="grid-item3 last-item">
           <h3>Sign up for our newsistter</h3>
           <p class="subtext">
             The latest deals and saving, sent to your inbox weekly.
@@ -161,27 +161,19 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/button.scss";
 
-
-
-.nav {
- 
+.nav { 
   padding: 20px ;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-left: 0.5rem;
-  padding-right: 0.5rem;
-
-
-  
+  padding-right: 0.5rem; 
 }
 
 .button {
   margin-right: auto;
   padding-left: 1rem;
-  // font-weight: 700;
-  
-  
+  // font-weight: 700;  
 }
 
 .button-login {
@@ -377,9 +369,37 @@ i {
   color: blue;
 }
 
-@media (max-width: 854px) {
-  .last-item {
-  display: none;
+@media (max-width: 1305px) {
+//   .last-item {
+//    display: none;  
+// }
+.grid-container {
+  display: grid;
+  grid-template-columns:auto auto auto;
+  grid-template-areas:
+    'header header header'
+    'main1 main2 main3'
+    'footer footer footer';
+  padding: 10px;
+}
+ul{
+  text-align: left;
+}
+.grid-logo{
+  margin: 1rem 0 1rem;
+  grid-area: header;
+}
+.grid-item{
+  grid-area: main1;
+}
+.grid-item1{
+  grid-area: main2;
+}
+.grid-item2{
+  grid-area: main3;
+}
+.grid-item3{
+  grid-area: footer;
 }
 }
 
@@ -394,8 +414,7 @@ i {
 
 }
 
-@media (max-width: 468px) {
-
+@media (max-width: 465px) {
   i {
   font-size: 15px;
   color: blue;
@@ -407,8 +426,7 @@ i {
 .span-h {
   font-size: 0.8rem;
   font-weight: 900;
-  padding-left: 0.2rem;
- 
+  padding-left: 0.2rem; 
 }
 
 .span-h-b {
@@ -416,8 +434,11 @@ i {
 }
 
 .newicon {
-
   margin: 7px;
+}
+
+ul{
+  text-align: center;
 }
 
 
