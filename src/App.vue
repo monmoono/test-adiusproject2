@@ -297,7 +297,6 @@ export default {
   background-color: #d9d9d9;
 }
 .grid-item {
-  padding: 10px;
   font-size: 30px;
   text-align: center;
   margin: 0;
