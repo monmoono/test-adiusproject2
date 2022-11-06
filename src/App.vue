@@ -63,7 +63,7 @@
       </div>
     </router-link>
     <router-link to="/login">
-      <a link class="btn success button-login"> Sign in </a>
+      <a link class="btn success button-login" id="login"> Sign in </a>
     </router-link>
   </div>
 

@@ -68,7 +68,12 @@
           </div>
         </div>
         <div>
-          <button class="btn primary" @click="Login" style="width: 100%;font-size:20px">
+          <button
+            class="btn primary"
+            @click="Login"
+            id="btnLogin"
+            style="width: 100%; font-size: 20px"
+          >
             Login
           </button>
         </div>
@@ -120,6 +125,9 @@ export default {
           } else {
             localStorage.removeItem("localVals");
           }
+          const btn = document.getElementById("login");          
+          btn.style.backgroundColor = "red";
+          btn.textContent = 'LogOut';
           this.$router.push({ name: "dataEmployeePage" });
         })
         .catch((err) => {
@@ -146,6 +154,11 @@ export default {
         localStorage.removeItem("localVals");
       }
     }
+  },
+  created() {
+    const btn = document.getElementById("login");
+    btn.style.backgroundColor = "green";
+    btn.textContent = 'Sign in';
   },
 };
 </script>

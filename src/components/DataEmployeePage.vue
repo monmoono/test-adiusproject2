@@ -76,7 +76,7 @@ export default {
       }, 3000);
       console.log(arr);
     });
-  },
+  },  
 };
 </script>
 
@@ -243,28 +243,21 @@ However, delay the fade out process for 2.5 seconds */
   }
 }
 
-
 @media (max-width: 912px) {
   .text-home {
-  font-size: 3rem;
+    font-size: 3rem;
+  }
 
-}
-
-.com {
-
-  grid-template-areas: "Box2";
- margin-left: 2.5rem ;
- margin-right: 3.9rem ;
-
-
-}
+  .com {
+    grid-template-areas: "Box2";
+    margin-left: 2.5rem;
+    margin-right: 3.9rem;
+  }
 }
 
 @media (max-width: 468px) {
   .text-home {
-  font-size: 1.5rem;
-
-}
-
+    font-size: 1.5rem;
+  }
 }
 </style>

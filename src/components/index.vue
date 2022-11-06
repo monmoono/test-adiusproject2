@@ -52,6 +52,9 @@ export default {
       }
       this.items = arr;
       console.log(arr);
+      const btn = document.getElementById("login");
+      btn.style.backgroundColor = "green";
+      btn.textContent = "Sign in";
     });
   },
 };
